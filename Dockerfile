@@ -7,6 +7,7 @@ RUN update-ms-fonts && fc-cache -f
 
 COPY --chown=node main.js package.json package-lock.json /app/
 RUN mkdir /app/downloads/ && chown -R node /app/downloads/
+RUN touch .env && chown node .env
 WORKDIR /app/
 USER node
 RUN npm install
