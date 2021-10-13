@@ -1,4 +1,4 @@
-FROM node:16.11.0-alpine3.13
+FROM node:16.11.1-alpine3.13
 
 RUN apk add --no-cache ttf-opensans fontconfig && fc-cache -f
 
