@@ -7,7 +7,7 @@ RUN mkdir /app/downloads/ && chown -R node /app/downloads/
 RUN touch .env && chown node .env
 WORKDIR /app/
 USER node
-RUN npm install
+RUN npm ci
 
 VOLUME /app/.env
 VOLUME /app/downloads
