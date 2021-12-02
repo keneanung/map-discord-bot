@@ -27,6 +27,11 @@ const config = {
     provider: MapProviders.retryingDownloader("https://ire-mudlet-mapping.github.io/LusterniaCrowdmap/Map/map", { retries: 5, delay: 10000 }),
     settings: mapRenderConfiguration,
   },
+  Imperian: {
+    locationExtractor: LocationResolvers.plainRegexp("^![Ii]mp(?:erian)? (\\d+)$"),
+    provider: MapProviders.retryingDownloader("https://ire-mudlet-mapping.github.io/ImperianCrowdmap/Map/map", { retries: 5, delay: 10000 }),
+    settings: mapRenderConfiguration,
+  },
 };
 
 configure(client, config);
