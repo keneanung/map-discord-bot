@@ -15,21 +15,25 @@ const config = {
   Achaea: {
     locationExtractor: LocationResolvers.plainRegexp("^![Aa]chaea (\\d+)$"),
     provider: MapProviders.retryingDownloader("https://ire-mudlet-mapping.github.io/AchaeaCrowdmap/Map/map", { retries: 5, delay: 10000 }),
+    renderFragment: true,
     settings: mapRenderConfiguration,
   },
   Starmourn: {
     locationExtractor: LocationResolvers.plainRegexp("^![Ss]tar(?:mourn)? (\\d+)$"),
     provider: MapProviders.retryingDownloader("https://ire-mudlet-mapping.github.io/StarmournCrowdmap/Map/map", { retries: 5, delay: 10000 }),
+    renderFragment: true,
     settings: mapRenderConfiguration,
   },
   Lusternia: {
     locationExtractor: LocationResolvers.plainRegexp("^![Ll]ust(?:y|ernia)? (\\d+)$"),
     provider: MapProviders.retryingDownloader("https://ire-mudlet-mapping.github.io/LusterniaCrowdmap/Map/map", { retries: 5, delay: 10000 }),
+    renderFragment: true,
     settings: mapRenderConfiguration,
   },
   Imperian: {
     locationExtractor: LocationResolvers.plainRegexp("^![Ii]mp(?:erian)? (\\d+)$"),
     provider: MapProviders.retryingDownloader("https://ire-mudlet-mapping.github.io/ImperianCrowdmap/Map/map", { retries: 5, delay: 10000 }),
+    renderFragment: true,
     settings: mapRenderConfiguration,
   },
 };
