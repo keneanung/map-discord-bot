@@ -36,6 +36,12 @@ const config = {
     renderFragment: true,
     settings: mapRenderConfiguration,
   },
+  Aetolia: {
+    locationExtractor: LocationResolvers.plainRegexp("^![Ae]to(?:lia)? (\\d+)$"),
+    provider: MapProviders.retryingDownloader("https://ire-mudlet-mapping.github.io/AetoliaCrowdmap/Map/map", { retries: 5, delay: 10000 }),
+    renderFragment: true,
+    settings: mapRenderConfiguration,
+  },
 };
 
 configure(client, config);
