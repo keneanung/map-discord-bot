@@ -44,6 +44,7 @@ const config = {
   },
 };
 
-configure(client, config);
+const configurator = configure(client, config);
+setInterval(configurator, 86400000) // fetch new maps every 24 hours
 
 client.login(process.env.BOT_TOKEN);
