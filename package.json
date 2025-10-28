@@ -6,7 +6,7 @@
     "dependencies": {
         "discord-mudlet-map": "^0.3.0",
         "dotenv": "^17.2.3",
-        "discord.js": "^14.24.0"
+        "discord.js": "^14.24.1"
     },
     "scripts": {
         "start": "node main.js"
