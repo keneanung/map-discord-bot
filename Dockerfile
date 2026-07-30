@@ -1,6 +1,9 @@
-FROM node:17.3.0-alpine3.13
+FROM node:lts-slim
 
-RUN apk add --no-cache ttf-opensans fontconfig && fc-cache -f
+RUN apt-get update && apt-get install -y \
+    fontconfig \
+    fonts-open-sans \
+ && rm -rf /var/lib/apt/lists/*
 
 COPY --chown=node main.js package.json package-lock.json /app/
 RUN mkdir /app/downloads/ && chown -R node /app/downloads/
