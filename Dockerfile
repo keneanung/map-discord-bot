@@ -3,7 +3,7 @@ FROM node:lts-slim
 RUN apt-get update && apt-get install -y \
     fontconfig \
     fonts-open-sans \
- && rm -rf /var/lib/apt/lists/*```
+ && rm -rf /var/lib/apt/lists/*
 
 COPY --chown=node main.js package.json package-lock.json /app/
 RUN mkdir /app/downloads/ && chown -R node /app/downloads/
