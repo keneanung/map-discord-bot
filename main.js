@@ -2,8 +2,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 import { Client, GatewayIntentBits } from "discord.js";
-import pkg from "discord-mudlet-map";
-const { configure, MapProviders, LocationResolvers } = pkg;
+import { configure, MapProviders, LocationResolvers } from "discord-mudlet-map";
 
 const client = new Client({ intents: [GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent, GatewayIntentBits.Guilds] });
 
