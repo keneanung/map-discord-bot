@@ -4,7 +4,7 @@
         "email": "keneanung@gmail.com"
     },
     "dependencies": {
-        "discord-mudlet-map": "^0.7.0",
+        "discord-mudlet-map": "^0.8.0",
         "dotenv": "^17.4.2",
         "discord.js": "^14.27.0"
     },
